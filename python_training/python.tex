@@ -1,0 +1,126 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+%\usepackage{natbib}
+%\usepackage{hyperref}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\author{Carl Stermann-L\"ucke, and Zainab Nazari}
+\title{Python in your pocket}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Installation}
+If you own a Google account you do not need to install anything! Because you can use colaboratory of google. This is the easiest that you can reach to a python notebook.
+In the website:https://colab.research.google.com you can read and write and run the python codes.
+We generally need to tell apart two different ways of running python:
+\begin{itemize}
+\item scripts
+\item notebooks
+\end{itemize}
+\subsection{Mac}
+\subsection{Wondows}
+\subsection{Linux}
+\section{Basics}
+\subsection{Comments}
+There are two types of comments:
+\begin{enumerate}
+\item line comments using $\#$,  using $\#$ in the beginning of any line, will make the line as comment and won't be evaluated during the run.
+\item multi-line comments using \verb+'''+ or $\verb+"""+$, we can comment out a part of our code simply by using it before and after the part of the code.
+example:
+\end{enumerate}
+\subsection{Operators}
+In python we have all the basic mathemetical operators. This includes
+\begin{itemize}
+\item = (assignment of the right-hand-side to the variable on the left-hand-side)
+\item + (addition)
+\item - (subtraction)
+\item * (multiplication)
+\item / (division of floating point numbers)
+\item // (division of integers)
+\item \% (modulo-operator, remainder of an integer division)
+\item ** (power)
+\item not (boolean inversion)
+\item or (boolean or)
+\item and (boolean and)
+\end{itemize}
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+= & assignment & a = 3 $\rightarrow$ a is a variable with the value 3 \\ \hline
++ & addition & 3 + 2 $\rightarrow$ 5 \\ \hline
+- & subtraction & 3 - 2 $\rightarrow$ 1 \\ \hline
+* & multiplication & 3 * 2 $\rightarrow$ 6 \\ \hline
+/ & division of floating point numbers & 3 / 2 $\rightarrow$ 1.5 \\ \hline
+// & division of integers & 3 // 2 $\rightarrow$ 1 \\ \hline
+\% & modulo-operator, remainder of an integer division & 3 \% 2 $\rightarrow$ 1 \\ \hline
+** & power & 3 ** 2 $\rightarrow$ 9 \\ \hline
+$>$ & greater than & 3 $>$ 2 $\rightarrow$ True \\ \hline
+$<$ & smaller than & 3 $<$ 2 $\rightarrow$ False \\ \hline
+== & check for identity & 3 == 3 $\rightarrow$ True \\ \hline
+!= & inverse check of identity & 2 != 3 $\rightarrow$ True \\ \hline
+not & boolean inversion & not True $\rightarrow$ False \\ \hline
+or & boolean or & True or False $\rightarrow$ True \\ \hline
+and & boolean and & True and False $\rightarrow$ False \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Indentation}
+Spacing matters!\\
+Lines of code that are always run after each other are also in the same level of indentation. That means that their first character is the same number of spaces or tabulator-spaces away from the left end of the line.
+\subsection{conditional statements}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+This code shows how to write conditional statements:
+\lstinputlisting[language=Python]{if-statement-example.py}
+The indented parts are only run under a certain condition.
+It is also possible to include more branch options using elif:
+\lstinputlisting[language=Python]{if-statement-example2.py}
+\subsection{while-loops}
+\subsection{functions}
+\section{numpy}
+\subsection{numpy arrays}
+\subsection{slicing}
+
+
+%\begin{figure}
+%\includegraphics[width=1.08 \textwidth]{s6}
+%\end{figure}
+
+
+\bibliographystyle{plain}
+\bibliography{refe}
+\end{document}
